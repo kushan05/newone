@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/p_15"
+    tools:context="com.bithunters.RankActivity">
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#CD25CD  "
+        android:textAlignment="center"
+        android:textColor="#0A0909"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvname"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="14dp"
+        android:background="#F5EEEE"
+        android:text="give rank"
+        android:textAlignment="center"
+        android:textColor="#0A0909" />
+
+    <Button
+        android:id="@+id/rank1"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rank2"
+        android:layout_alignStart="@+id/textView24"
+        android:layout_marginBottom="25dp"
+        android:background="#CFCC31"
+        android:text="*"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#CE0515"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/rank2"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rank3"
+        android:layout_alignStart="@+id/rank1"
+        android:layout_marginBottom="20dp"
+        android:background="#CFCC31"
+        android:text="*    *"
+        android:textAlignment="textStart"
+        android:textColor="#CE0515"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/rank3"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rank4"
+        android:layout_alignStart="@+id/rank2"
+        android:layout_marginBottom="26dp"
+        android:background="#CFCC31"
+        android:text="*    *    *"
+        android:textAlignment="textStart"
+        android:textColor="#CE0515"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/rank4"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rank5"
+        android:layout_alignStart="@+id/rank3"
+        android:layout_marginBottom="20dp"
+        android:background="#CFCC31"
+        android:text="*    *    *    *"
+        android:textAlignment="textStart"
+        android:textColor="#CE0515"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/rank5"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/rank4"
+        android:layout_marginBottom="35dp"
+        android:background="#CFCC31"
+        android:text="*    *    *    *    *"
+        android:textAlignment="textStart"
+        android:textColor="#CE0515"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</RelativeLayout>

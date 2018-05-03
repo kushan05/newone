@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/p_15"
+    tools:context="com.bithunters.DetailsActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="25dp"
+        android:background="#164471"
+        android:text="FIRST NAME"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="39dp"
+        android:background="#164471"
+        android:text="LAST NAME"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_below="@+id/textView15"
+        android:layout_marginTop="33dp"
+        android:background="#164471"
+        android:text="DATE OF BIRTH"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/textView16"
+        android:layout_below="@+id/textView16"
+        android:layout_marginTop="32dp"
+        android:background="#164471"
+        android:text="E-MAIL"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/textView17"
+        android:layout_below="@+id/textView17"
+        android:layout_marginTop="31dp"
+        android:background="#164471"
+        android:text="WORKING HOURS"
+        android:textAlignment="viewStart"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/textView18"
+        android:layout_below="@+id/textView18"
+        android:layout_marginTop="37dp"
+        android:background="#164471"
+        android:text="START DATE"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/textView19"
+        android:layout_below="@+id/textView19"
+        android:layout_marginTop="45dp"
+        android:background="#164471"
+        android:text="CATEGORY"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/department"
+        android:layout_alignBottom="@+id/department"
+        android:layout_alignStart="@+id/textView20"
+        android:background="#164471"
+        android:text="DEPARTMENT"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/first"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/last"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView15"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_alignEnd="@+id/first"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView16"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_alignStart="@+id/last"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_alignStart="@+id/dob"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/hours"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView18"
+        android:layout_alignBottom="@+id/textView18"
+        android:layout_alignStart="@+id/mail"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sdate"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView19"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_alignStart="@+id/hours"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_alignStart="@+id/sdate"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/department"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/category"
+        android:layout_below="@+id/category"
+        android:layout_marginTop="36dp"
+        android:background="#CE8206"
+        android:textAlignment="center"
+        android:textColor="#D3D7DA"
+        android:textSize="18sp" />
+
+</RelativeLayout>

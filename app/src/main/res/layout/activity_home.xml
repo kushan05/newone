@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/p_15"
+    tools:context="com.bithunters.HomeActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/notification"
+        android:text="HOME"
+        android:textAlignment="center"
+        android:textColor="#D3D6CB"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/detail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="12dp"
+        android:layout_toStartOf="@+id/textView5"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/detail" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/detail"
+        android:layout_marginStart="27dp"
+        android:background="#040404"
+        android:text="MY DETAILS"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/notification"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignEnd="@+id/textView7"
+        android:layout_alignTop="@+id/detail"
+        android:layout_marginEnd="22dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/notification" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/notification"
+        android:layout_marginStart="62dp"
+        android:layout_toEndOf="@+id/textView6"
+        android:background="#040404"
+        android:text="ADMIN NOTIFICATION"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/confirm_out"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView8"
+        android:layout_alignStart="@+id/detail"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/out" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_centerVertical="true"
+        android:background="#040404"
+        android:text="COMFIRM OUT"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/confirm_in"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/notification"
+        android:layout_alignTop="@+id/confirm_out"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/in" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignStart="@+id/textView7"
+        android:background="#040404"
+        android:text="COMFIRM IN"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/leavebalace"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView10"
+        android:layout_alignStart="@+id/confirm_out"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/leave" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_above="@+id/applyLeave"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginBottom="14dp"
+        android:background="#040404"
+        android:text="LEAVE BALANCE"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView11"
+        android:layout_alignStart="@+id/confirm_in"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/logout" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView10"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_alignStart="@+id/textView9"
+        android:background="#040404"
+        android:text="LOG OUT"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/applyLeave"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView12"
+        android:layout_alignStart="@+id/leavebalace"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/leave" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_marginBottom="22dp"
+        android:background="#040404"
+        android:text="APPLY LEAVE"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/rank"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView13"
+        android:layout_alignStart="@+id/logout"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ranking" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@+id/textView12"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_alignStart="@+id/textView11"
+        android:background="#040404"
+        android:text="RANKING"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

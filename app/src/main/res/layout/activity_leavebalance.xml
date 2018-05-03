@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@mipmap/p_15"
+    android:layout_height="match_parent"
+    tools:context="com.bithunters.LeavebalanceActivity">
+
+    <TextView
+        android:id="@+id/medical"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/annual"
+        android:layout_alignStart="@+id/annual"
+        android:layout_marginBottom="108dp"
+        android:background="#C598EF"
+        android:text="MEDICAL LEAVE"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/casual"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/annual"
+        android:layout_marginBottom="100dp"
+        android:background="#C598EF"
+        android:text="CASUAL LEAVE"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+    <TextView
+        android:id="@+id/annual"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="38dp"
+        android:background="#C598EF"
+        android:text="ANNUAL LEAVE"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <TextView
+        android:id="@+id/medicalnum1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/medical"
+        android:layout_alignBottom="@+id/medical"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:background="#560AAC"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/annualnum1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/annual"
+        android:layout_alignStart="@+id/medicalnum1"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:background="#560AAC"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/casualnum1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/casual"
+        android:layout_alignStart="@+id/annualnum1"
+        android:background="#560AAC"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>

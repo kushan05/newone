@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BitHunters</string>
+    <string name="title_activity_confirm_in">ConfirmIn</string>
+
+    <string-array name="leaveType">
+        <item>medical</item>
+        <item>annual</item>
+        <item>casual</item>
+    </string-array>
+
+    <string-array name="empnames">
+        <item>SANDARUWAN</item>
+        <item>KUSHAN</item>
+        <item>RANGA</item>
+        <item>SUDARAKA</item>
+        <item>HASINI</item>
+    </string-array>
+</resources>

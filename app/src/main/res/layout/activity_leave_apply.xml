@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/p_15"
+    tools:context="com.bithunters.LeaveApplyActivity">
+
+
+    <TextView
+        android:id="@+id/leavestartday"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/leavetype"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="47dp"
+        android:background="#F5EEEE"
+        android:hint="leave start date"
+        android:textAlignment="center"
+        android:textColor="#0A0909"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/leavetype"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/leavedays"
+        android:layout_alignStart="@+id/leavedays"
+        android:layout_marginBottom="50dp"
+        android:background="#F5EEEE"
+        android:entries="@array/leaveType"
+        android:textColor="#E4EEE0" />
+
+    <EditText
+        android:id="@+id/leavedays"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/applybutton"
+        android:layout_centerVertical="true"
+        android:background="#F5EEEE"
+        android:hint="leave days"
+        android:textAlignment="viewStart"
+        android:textColor="#0A0909"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/applybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp"
+        android:background="#76B5CE"
+        android:text="Apply For the leave"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#E4EEE0"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@+id/leavestartday"
+        android:layout_alignBottom="@+id/leavestartday"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:background="#F5EEEE"
+        android:text=" LEAVE DATE"
+        android:textAlignment="viewStart"
+        android:textColor="#0A0909"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

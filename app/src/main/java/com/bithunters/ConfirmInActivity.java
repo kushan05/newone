@@ -1,0 +1,118 @@
+package com.bithunters;
+
+import android.app.DatePickerDialog;
+import android.content.SharedPreferences;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.bithunters.confirmout.ConfirmOutClient;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class ConfirmInActivity extends AppCompatActivity {
+
+    private Calendar calendar;
+    private int year, month,day;
+    private String FogotDate;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_confirm_in);
+
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("loginDetails",0);
+        final String email = sharedPreferences.getString("login_email","");
+
+        Date date =new Date();
+        DateFormat dateFormat = new DateFormat();
+        final String formattedDate = dateFormat.format("MM/dd/yyyy", date).toString();
+        final String formattedTime = dateFormat.format("hh:mm:ss", date).toString();
+
+
+        final EditText Content = (EditText) findViewById(R.id.content);
+        final TextView fogotDate = (TextView)findViewById(R.id.fogotdate);
+        Button confirmButton = (Button) findViewById(R.id.confirmbutton);
+
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        FogotDate = Integer.toString(month+1) + "/" + Integer.toString(day) + "/" + Integer.toString(year);
+        fogotDate.setText(FogotDate);
+
+        fogotDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(ConfirmInActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+                        year = datePicker.getYear();
+                        month = datePicker.getMonth()+1;
+                        day = datePicker.getDayOfMonth();
+                        FogotDate = Integer.toString(month) + "/" + Integer.toString(day) + "/" + Integer.toString(year);
+                        fogotDate.setText(FogotDate);
+                        //Toast.makeText(getApplicationContext(),leaveStartDate, Toast.LENGTH_LONG).show();
+                    }
+                }, year, month, day).show();
+            }
+        });
+
+
+
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                final String contrntInput = Content.getText().toString();
+
+                if("".equals(contrntInput)){
+                    Content.setError("can't be empty");
+                }
+                else{
+
+                    Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
+                            .baseUrl(Config.API_DOMAIN)
+                            .addConverterFactory(GsonConverterFactory.create());
+                    Retrofit retrofit = retrofitBuilder.build();
+                    ConfirmOutClient client = retrofit.create(ConfirmOutClient.class);
+                    Call<Response> call = client.confirmout(email, formattedTime, formattedDate, "bithuntersuom@gmail.com", "IN :" + contrntInput +FogotDate);
+                    call.enqueue(new Callback<Response>() {
+                        @Override
+                        public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                            Response responseBody = response.body();
+
+                            if ("valid".equals(responseBody.getSuccess())) {
+                                Toast.makeText(ConfirmInActivity.this, "Your Confirm Success", Toast.LENGTH_SHORT).show();
+                                finish();
+                            } else {
+                                Toast.makeText(ConfirmInActivity.this, "Confirm  Failed", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<Response> call, Throwable t) {
+                            Toast.makeText(ConfirmInActivity.this, "Error Confirm Failed " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+
+
+            }
+        });
+
+    }
+}
